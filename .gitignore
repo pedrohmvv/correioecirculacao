@@ -1,0 +1,15 @@
+# Ambiente Virtual
+venv/
+env/
+.venv/
+
+# Arquivos de Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos do Streamlit
+.streamlit/secrets.toml
+
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
