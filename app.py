@@ -78,3 +78,5 @@ else:
     st.write("1. Configure `st.secrets` com as credenciais necessárias (Sheets, Telegram, OCR se aplicável).")
     st.write("2. Use 'Enviar Pedido' para submeter novos pedidos.")
     st.write("3. Voluntários acessam 'Dashboard do Voluntário' para processar pedidos.")
+
+
