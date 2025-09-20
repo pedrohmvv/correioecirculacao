@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 st.sidebar.title("Navegação")
-page = st.sidebar.radio("Ir para", ["Enviar Pedido", "Dashboard do Voluntário", "Sobre"])
+page = st.sidebar.radio("Ir para", ["Enviar Pedido", "Sobre"])
 
 @st.cache_resource
 def init_services():
@@ -62,8 +62,8 @@ sheets, telegram = init_services()
 # Roteamento
 if page == "Enviar Pedido":
     form_page.render(sheets_service=sheets, telegram_service=telegram)
-elif page == "Dashboard do Voluntário":
-    dashboard_page.render(sheets_service=sheets, telegram_service=telegram)
+#elif page == "Dashboard do Voluntário":
+#    dashboard_page.render(sheets_service=sheets, telegram_service=telegram)
 else:
     st.title("📦 Pombo Correio Digital — Sobre")
     st.write("""
