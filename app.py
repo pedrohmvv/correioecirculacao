@@ -1,11 +1,17 @@
 # app.py
 import streamlit as st
 import json
+import os
 from services.sheets_service import SheetsService
 from services.telegram_service import TelegramService
 from ui import form_page, dashboard_page
 
-st.set_page_config(page_title="Pombo Correio Digital", layout="centered", page_icon="logo.png")
+IMG_PATH = os.path.join(os.path.dirname(__file__), "assets", "logo.png")
+st.set_page_config(
+    page_title="Pombo Correio Digital", 
+    layout="centered", 
+    page_icon=IMG_PATH
+)
 
 st.sidebar.title("Navegação")
 page = st.sidebar.radio("Ir para", ["Enviar Pedido", "Dashboard do Voluntário", "Sobre"])
