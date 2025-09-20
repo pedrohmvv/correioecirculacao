@@ -135,8 +135,8 @@ def render(sheets_service, telegram_service):
                     diretorio=qrcode_dir
                 )
                 payload_code = payload.gerarPayload()
-                st.code(payload_code, language=None)
-                st.caption("Copie o código acima e pague no app do seu banco.")
+                st.code(f"(83) 99186-8219 - Valor R${data['valor_total']:.2f}", language=None)
+                st.caption("Copie a chave acima e pague no app do seu banco.")
             except Exception as e:
                 st.error(f"Erro ao gerar código Pix: {e}")
                 st.button("Tentar novamente")
