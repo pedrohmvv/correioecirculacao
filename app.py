@@ -5,7 +5,7 @@ from services.sheets_service import SheetsService
 from services.telegram_service import TelegramService
 from ui import form_page, dashboard_page
 
-st.set_page_config(page_title="Pombo Correio Digital", layout="centered")
+st.set_page_config(page_title="Pombo Correio Digital", layout="centered", page_icon="logo.png")
 
 st.sidebar.title("Navegação")
 page = st.sidebar.radio("Ir para", ["Enviar Pedido", "Dashboard do Voluntário", "Sobre"])
@@ -78,5 +78,6 @@ else:
     st.write("1. Configure `st.secrets` com as credenciais necessárias (Sheets, Telegram, OCR se aplicável).")
     st.write("2. Use 'Enviar Pedido' para submeter novos pedidos.")
     st.write("3. Voluntários acessam 'Dashboard do Voluntário' para processar pedidos.")
+
 
 
