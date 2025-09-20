@@ -78,10 +78,10 @@ def render(sheets_service, telegram_service):
             combo = st.selectbox("Escolha o combo", list(COMBOS_CANTADAS.keys()))
             valor_total = COMBOS_CANTADAS.get(combo, 0.0)
             
-            st.markdown("[**Clique aqui para ver o cardápio de Cantadas**](https://drive.google.com/file/d/1lOLwWmBzTtyGDzvCJBxLiGFyoyk8tIKy/view?usp=sharing)")
+            st.markdown("[**Clique aqui para ver o cardápio de Cantadas**](https://drive.google.com/file/d/1pAeWxCWeBSZSUhYTUVwpIWDVgZBjPi0T/view?usp=sharing)")
             cantada_id = st.selectbox("Escolha o Nº da Cantada", CANTADAS_OPCOES)
 
-            st.markdown("[**Clique aqui para ver o cardápio de Paródias**](https://drive.google.com/file/d/1HQEQQmshMI7UemtKhD57qMfILIxMQALp/view?usp=sharing)")
+            st.markdown("[**Clique aqui para ver o cardápio de Paródias**](https://drive.google.com/file/d/1GxIF6KYnO9tRKhSB9aJ33jFLtW-pd7Ez/view?usp=sharing)")
             parodia_id = st.selectbox("Escolha o nome da Paródia", PARODIAS_OPCOES)
 
             mensagem_opcional = st.text_area("Mensagem da cartinha (opcional)") if combo and "CARTINHA" in combo else None
