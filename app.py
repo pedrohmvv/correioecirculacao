@@ -4,7 +4,7 @@ import json
 import os
 from services.sheets_service import SheetsService
 from services.telegram_service import TelegramService
-from ui import form_page, dashboard_page
+from ui import form_page, about_page, dashboard_page
 
 IMG_PATH = os.path.join(os.path.dirname(__file__), "assets", "logo.png")
 st.set_page_config(
@@ -65,19 +65,6 @@ if page == "Enviar Pedido":
 #elif page == "Dashboard do Voluntário":
 #    dashboard_page.render(sheets_service=sheets, telegram_service=telegram)
 else:
-    st.title("📦 Pombo Correio Digital — Sobre")
-    st.write("""
-        Aplicação para gerenciar pedidos de **Cartas** e **Cantadas** em eventos.
-        
-        **Arquitetura:**
-        - Streamlit (UI)
-        - Google Sheets (persistência)
-        - Telegram (notificações)
-    """)
-    st.markdown("---")
-    st.write("### Como usar:")
-    st.write("1. Configure `st.secrets` com as credenciais necessárias (Sheets, Telegram, OCR se aplicável).")
-    st.write("2. Use 'Enviar Pedido' para submeter novos pedidos.")
-    st.write("3. Voluntários acessam 'Dashboard do Voluntário' para processar pedidos.")
+    about_page.render()
 
 
